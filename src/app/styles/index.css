@@ -1,0 +1,7 @@
+@import "theme/dark.css";
+@import "utilities.css";
+/* @import "reset.css"; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

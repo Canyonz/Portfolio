@@ -1,0 +1,17 @@
+@layer utilities {
+	.rotate-y-180 {
+		transform: rotateY(180deg);
+	}
+
+	.backface-visibility-hidden {
+		backface-visibility: hidden;
+	}
+
+	.backface-visibility-visible {
+		backface-visibility: visible;
+	}
+
+	.h-screen-h {
+		min-height: calc(100vh - 80px);
+	}
+}
