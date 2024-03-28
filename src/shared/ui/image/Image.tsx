@@ -1,7 +1,7 @@
 import cls from 'classnames'
 import { ImgHTMLAttributes } from 'react'
 
-type ObjectFit = "contain" | "cover"
+type ObjectFit = "object-contain" | "object-cover"
 
 interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   src: string,
@@ -10,8 +10,8 @@ interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   className?: string
 }
 
-export const Image = ({ src, alt, objectFit = 'cover', className, ...otherProps }: ImageProps) => {
+export const Image = ({ src, alt, objectFit = 'object-cover', className, ...otherProps }: ImageProps) => {
   return (
-    <img src={src} alt={alt} className={cls(`w-full h-full object-${objectFit} object-center pointer-events-none select-none`, className)} {...otherProps} />
+    <img src={src} alt={alt} className={cls(`w-full h-full ${objectFit} object-center pointer-events-none select-none`, className)} {...otherProps} />
   )
 }

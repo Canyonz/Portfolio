@@ -34,7 +34,7 @@ export const ARCard = ({ name, preview, media }: ARCardProps) => {
   const selectPreview = !select?.video ?
     (
       <button onClick={handleClickPreviewOpen} className="relative h-[250px]">
-        <Image src={select.img} objectFit="contain" />
+        <Image src={select.img} objectFit="object-contain" />
         <div className="group absolute inset-0 flex justify-center items-center">
           <Icon Svg={SizeSVG} size={128} className="text-bg opacity-0 transition-opacity group-hover:opacity-70" />
         </div>
@@ -67,7 +67,7 @@ export const ARCard = ({ name, preview, media }: ARCardProps) => {
           <div className="relative max-w-screen-2xl max-h-full z-40">
             <Image
               src={select.img}
-              objectFit="contain"
+              objectFit="object-contain"
               alt="Preview"
             />
           </div>

@@ -1,5 +1,5 @@
 interface IconProps {
-  Svg: React.FC<React.SVGProps<SVGSVGElement>>;
+  Svg: React.FC<React.SVGProps<SVGSVGElement>> | string;
   size?: number,
   className?: string
 }
