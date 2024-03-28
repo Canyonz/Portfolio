@@ -12,8 +12,8 @@ interface PetCardProps {
 export const PetCard = ({ img, name, description, link, gitHub }: PetCardProps) => {
   return (
     <div className="max-w-[450px]">
-      <a href={link} target="_blank" className="block  relative group cursor-pointer">
-        <div className="block  p-1 backface-visibility-hidden transition-transform duration-300 group-hover:rotate-y-180">
+      <a href={link} target="_blank" className="block relative group cursor-pointer">
+        <div className="p-1 backface-visibility-hidden transition-transform duration-300 group-hover:rotate-y-180">
 
           <div className="relative flex flex-col bg-border rounded-t-md z-20">
             <Image src={img} />

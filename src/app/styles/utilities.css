@@ -14,4 +14,23 @@
 	.h-screen-h {
 		min-height: calc(100vh - 80px);
 	}
+
+	.scroll-style::-webkit-scrollbar {
+		height: 12px;
+	}
+
+	.scroll-style::-webkit-scrollbar-track {
+		background-color: var(--bg);
+		border-radius: 5px;
+	}
+
+	.scroll-style::-webkit-scrollbar-thumb {
+		background-color: var(--border);
+		border-radius: 5px;
+		border: 2px solid var(--bg);
+	}
+
+	.scroll-style::-webkit-scrollbar-thumb:hover {
+		background-color: var(--primary);
+	}
 }

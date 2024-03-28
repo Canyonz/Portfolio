@@ -13,6 +13,7 @@ export default {
 			btnBgHover: "var(--btn-bg-hover)",
 			btnText: "var(--btn-text)",
 			border: "var(--border)",
+			bgOverlay: "var(--bg-overlay)",
 		},
 		extend: {},
 	},
