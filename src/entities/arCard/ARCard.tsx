@@ -62,7 +62,7 @@ export const ARCard = ({ name, preview, media }: ARCardProps) => {
       <Text title={name} TitleTag="h2" align="center" className="overflow-x-hidden text-nowrap text-ellipsis" />
 
       {imageExpand && (
-        <div className="fixed inset-0 flex items-center justify-center z-30">
+        <div className="fixed inset-0 flex items-center justify-center z-30 select-none">
           <div onClick={handleClickPreviewClose} className="fixed inset-0 bg-bgOverlay"></div>
           <div className="relative max-w-screen-2xl max-h-full z-40">
             <Image

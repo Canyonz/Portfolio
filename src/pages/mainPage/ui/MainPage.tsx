@@ -2,155 +2,12 @@ import { ARCard } from "@/entities/arCard/ARCard"
 import { PetCard } from "@/entities/petCard/PetCard"
 import { Skill } from "@/shared/ui/skill/Skill"
 import { Text } from "@/shared/ui/text/Text"
-
-const petProjectsList = [
-  {
-    name: "Laser",
-    description: "Лендинг для компании по лазерной коррекции зрения",
-    img: "./pet/Laser.jpg",
-    link: "https://canyonz.github.io/Laser/",
-    gitHub: "https://github.com/Canyonz/Gantt-Charts"
-  },
-  {
-    name: "Loft Space",
-    description: "Интернет магазин мебели",
-    img: "./pet/LoftSpace.jpg",
-    link: "https://canyonz.github.io/LoftSpace/",
-    gitHub: "https://github.com/Canyonz/Gantt-Charts"
-  },
-  {
-    name: "Gantt Charts",
-    description: "Проект по работе с диграммой ганта",
-    img: "./pet/GanttCharts.jpg",
-    link: "https://canyonz.github.io/Gantt-Charts/",
-    gitHub: "https://github.com/Canyonz/Gantt-Charts"
-  },
-]
-
-const arProjectsList = [
-  {
-    name: "Pinata",
-    preview: "./ar/pinata/preview.png",
-    media: [
-      {
-        img: "./ar/pinata/video.png",
-        video: "./ar/pinata/video.mp4"
-      },
-      {
-        img: "./ar/pinata/video1.png",
-        video: "./ar/pinata/video1.mp4"
-      },
-      {
-        img: "./ar/pinata/video2.png",
-        video: "./ar/pinata/video2.mp4"
-      },
-      {
-        img: "./ar/pinata/img.png"
-      },
-      {
-        img: "./ar/pinata/img1.png"
-      },
-    ],
-  },
-  {
-    name: "Hydrant",
-    preview: "./ar/hydrant/preview.jpg",
-    media: [
-      {
-        img: "./ar/hydrant/video.png",
-        video: "./ar/hydrant/video.mp4"
-      },
-      {
-        img: "./ar/hydrant/video1.png",
-        video: "./ar/hydrant/video1.mp4"
-      },
-      {
-        img: "./ar/hydrant/video2.png",
-        video: "./ar/hydrant/video2.mp4"
-      },
-      {
-        img: "./ar/hydrant/img.png"
-      },
-      {
-        img: "./ar/hydrant/img1.png"
-      },
-    ],
-  },
-  {
-    name: "Pizza",
-    preview: "./ar/pizza/preview.png",
-    media: [
-      {
-        img: "./ar/pizza/video.png",
-        video: "./ar/pizza/video.mp4"
-      },
-      {
-        img: "./ar/pizza/video1.png",
-        video: "./ar/pizza/video1.mp4"
-      },
-      {
-        img: "./ar/pizza/video2.png",
-        video: "./ar/pizza/video2.mp4"
-      },
-      {
-        img: "./ar/pizza/img.png"
-      },
-    ],
-  },
-]
-
-const aboutMeList = [
-  {
-    title: "Имя:",
-    text: "Данил",
-  },
-  {
-    title: "Фамилия:",
-    text: "Васильев",
-  },
-  {
-    title: "Возраст:",
-    text: "23 года",
-  },
-  {
-    title: "Образование:",
-    text: "Среднее специальное образование в \"МКЭиИТ\"",
-  }
-]
-
-const experienceList = [
-  {
-    company: "Instafilter",
-    start: "Октябрь 2021",
-    end: "Февраль 2023",
-    job: "AR Developer",
-    responsibilities: "Разработка эффектов дополненной реальности",
-  }
-]
-
-const skillsList = [
-  "HTML5",
-  "CSS3",
-  "JavaScript",
-  "ReactJS",
-  "REST API",
-  "Axios",
-  "Git",
-]
-
-const skillsInStudyingList = [
-  "TypeScript",
-  "Tailwind",
-  "Redux Toolkit + Query + Thunk",
-  "MaterialUI",
-  "CI/CD",
-  "Jest Tests",
-  "Cypress Tests",
-  "FSD",
-  "Next",
-]
-
-
+import { petProjectsList } from "../const/petProjectsList"
+import { arProjectsList } from "../const/arProjectsList"
+import { aboutMeList } from "../const/aboutMeList"
+import { experienceList } from "../const/experienceList"
+import { skillsList } from "../const/skillsList"
+import { skillsInStudyingList } from "../const/skillsInStudyingList"
 
 export const MainPage = () => {
   return (
@@ -240,7 +97,7 @@ export const MainPage = () => {
       </div>
 
 
-      <Text title="Проекты дополненной реальности с моим участием (В разработке...)" TitleTag="h1" className="mb-5" />
+      <Text title="Проекты дополненной реальности с моим участием" TitleTag="h1" className="mb-5" />
       <div className="grid grid-cols-[repeat(auto-fit,minmax(450px,1fr))]  justify-items-center gap-5">
         {arProjectsList.map((project) => (
           <ARCard key={project.name} name={project.name} preview={project.preview} media={project.media} />
